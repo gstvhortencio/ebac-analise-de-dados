@@ -22,6 +22,14 @@ Lógica de programação, tipos de dados, estruturas condicionais, estruturas de
 | [`02-operadores-basicos.ipynb`](01-python-fundamentos/notebooks/02-operadores-basicos.ipynb) | Operadores aritméticos, relacionais e lógicos; tabela-verdade de `and`, `or` e `not` |
 | [`03-exercicios-fim-de-modulo.ipynb`](01-python-fundamentos/notebooks/03-exercicios-fim-de-modulo.ipynb) | Cálculo de média com aprovação condicional, verificação de senha, leitura de lista de feedbacks e de dicionário de cliente |
 
+### [02 — Visualização de Dados](02-visualizacao-dados/)
+
+Gráficos com `matplotlib` e `seaborn` sobre uma base de e-commerce — histograma, dispersão, mapa de calor, barras, pizza, densidade e regressão, cada um com a leitura de negócio que sustenta.
+
+| Notebook | Conteúdo |
+|---|---|
+| [`01-visualizacao-ecommerce.ipynb`](02-visualizacao-dados/notebooks/01-visualizacao-ecommerce.ipynb) | 7 tipos de gráfico sobre preço, nota, desconto, marca e público; conclusões voltadas a decisão de estoque e campanha |
+
 🚧 Próximos módulos serão adicionados conforme o curso avança.
 
 ---
@@ -49,7 +57,7 @@ pip install notebook
 jupyter notebook
 ```
 
-Os notebooks deste módulo usam apenas a biblioteca padrão do Python — não há dependências a instalar.
+Cada módulo lista, na própria pasta, as bibliotecas além da padrão que precisa instalar (quando houver).
 
 ---
 
