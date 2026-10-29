@@ -6,6 +6,16 @@ Versão interativa da análise do [notebook](../notebooks/01-visualizacao-ecomme
 
 **Filtros:** público, faixa de preço e anúncios repetidos (remover ou manter). Todos os números e gráficos reagem aos mesmos filtros.
 
+![Visão geral do dashboard: filtros, cinco indicadores e gráficos de preço, marcas e público](imagens/visao-geral.png)
+
+Os filtros mudam indicadores, gráficos e frases de leitura ao mesmo tempo. Abaixo, o público feminino na faixa de até R$ 75:
+
+![Dashboard filtrado por público feminino e faixa de preço até R$ 75](imagens/filtro-feminino-ate-75.png)
+
+Mais abaixo na página, o boxplot de avaliações por faixa de vendas (escala logarítmica) e os temas citados nas avaliações:
+
+![Boxplot de avaliações por faixa de vendas e gráfico de temas das avaliações](imagens/avaliacoes-e-temas.png)
+
 ## Como rodar
 
 ```bash
@@ -33,6 +43,7 @@ python exportar_html.py --offline    # dashboard.html com o Plotly embutido, ~6,
 | `app.py` | Layout e callbacks do Dash |
 | `exportar_html.py` | Gera o HTML estático a partir das mesmas funções |
 | `assets/estilo.css` | Estilo único, usado pelo Dash e embutido no HTML |
+| `imagens/` | Capturas de tela usadas neste README |
 
 ## Decisões sobre os dados
 

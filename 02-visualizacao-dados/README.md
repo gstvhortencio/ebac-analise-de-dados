@@ -33,6 +33,8 @@ Exploração de um catálogo de produtos de moda, com uma leitura escrita para c
 
 A mesma base em versão interativa: cinco indicadores, oito gráficos em Plotly e uma tabela, com filtros por público, faixa de preço e anúncios repetidos. Roda como app Dash e também exporta um HTML único. Detalhes, como rodar e limites estão no [README do dashboard](dashboard/README.md).
 
+![Visão geral do dashboard: filtros, cinco indicadores e gráficos de preço, marcas e público](dashboard/imagens/visao-geral.png)
+
 ## Como abrir o notebook
 
 O notebook já roda com os gráficos salvos — abrem direto aqui no GitHub, sem precisar executar nada. Para rodar:
