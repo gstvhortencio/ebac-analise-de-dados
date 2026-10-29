@@ -1,0 +1,101 @@
+/* Estilo único: usado pelo app Dash (pasta assets/) e embutido no HTML estático. */
+:root {
+  --pagina: #f9f9f7;
+  --superficie: #fcfcfb;
+  --texto: #0b0b0b;
+  --texto-2: #52514e;
+  --texto-mudo: #898781;
+  --linha: #e1e0d9;
+  --borda: rgba(11, 11, 11, 0.10);
+  --azul: #2a78d6;
+  --fonte: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --Dash-Fill-Interactive-Strong: #2a78d6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--pagina);
+  color: var(--texto);
+  font-family: var(--fonte);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pagina { max-width: 1240px; margin: 0 auto; padding: 40px 24px 56px; }
+
+/* ---------- cabeçalho ---------- */
+.cabecalho h1 { margin: 0; font-size: 30px; font-weight: 650; letter-spacing: -0.02em; }
+.cabecalho p { margin: 6px 0 0; color: var(--texto-2); font-size: 15px; max-width: 720px; }
+
+/* ---------- filtros: duas linhas acima de tudo ---------- */
+.filtros {
+  display: flex; flex-direction: column; gap: 18px;
+  margin: 28px 0 20px; padding-bottom: 20px; border-bottom: 1px solid var(--linha);
+}
+.filtro-linha { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 18px 40px; }
+.filtro-grupo { display: flex; flex-direction: column; gap: 8px; }
+.filtro-rotulo { font-size: 12px; font-weight: 600; color: var(--texto-mudo); letter-spacing: 0.02em; }
+
+.seg { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.seg button, .seg label {
+  font: inherit; font-size: 13px; color: var(--texto-2); cursor: pointer;
+  background: transparent; border: 1px solid var(--borda); border-radius: 999px;
+  padding: 6px 14px; transition: background 0.12s, color 0.12s;
+}
+.seg button:hover, .seg label:hover { background: rgba(11, 11, 11, 0.05); }
+.seg button[aria-pressed="true"], .seg label:has(input:checked) {
+  background: var(--texto); color: #ffffff; border-color: var(--texto);
+}
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg .n { color: var(--texto-mudo); margin-left: 6px; font-size: 12px; }
+.seg [aria-pressed="true"] .n, .seg label:has(input:checked) .n { color: #c3c2b7; }
+
+.filtro-preco { width: 250px; padding: 0 8px; }
+
+.nota { margin: -4px 0 20px; font-size: 13px; color: var(--texto-2); max-width: 900px; }
+
+/* ---------- indicadores ---------- */
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 16px; }
+.kpi {
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: 14px;
+  padding: 16px 18px; min-height: 104px;
+}
+.kpi-rotulo { font-size: 13px; color: var(--texto-2); }
+.kpi-valor { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; margin-top: 4px; }
+.kpi-ref { font-size: 12px; color: var(--texto-mudo); margin-top: 2px; min-height: 17px; }
+
+/* ---------- cartões e grade ---------- */
+.grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cartao {
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: 14px;
+  padding: 20px 22px 14px; min-width: 0;
+}
+.cartao.largo { margin-top: 16px; }
+.cartao h2 { margin: 0; font-size: 16px; font-weight: 650; }
+.leitura { margin: 4px 0 12px; font-size: 13px; color: var(--texto-2); min-height: 38px; }
+
+/* ---------- tabela (também é a versão em texto dos gráficos) ---------- */
+.tabela-rolagem { overflow-x: auto; margin-top: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th {
+  text-align: left; font-weight: 600; font-size: 12px; color: var(--texto-mudo);
+  padding: 8px 12px; border-bottom: 1px solid var(--linha); white-space: nowrap;
+}
+td { padding: 9px 12px; border-bottom: 1px solid var(--linha); color: var(--texto); }
+tr:last-child td { border-bottom: 0; }
+th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---------- rodapé ---------- */
+.rodape { margin-top: 28px; font-size: 12px; color: var(--texto-mudo); max-width: 860px; }
+.rodape p { margin: 0 0 6px; }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 1000px) { .kpis { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px) {
+  .grade { grid-template-columns: 1fr; }
+  .pagina { padding: 28px 16px 40px; }
+  .filtro-preco { width: 100%; }
+}
+@media (max-width: 560px) { .kpis { grid-template-columns: repeat(2, 1fr); } .cabecalho h1 { font-size: 24px; } }

@@ -24,11 +24,12 @@ Lógica de programação, tipos de dados, estruturas condicionais, estruturas de
 
 ### [02 — Visualização de Dados](02-visualizacao-dados/)
 
-Gráficos com `matplotlib` e `seaborn` sobre uma base de e-commerce — histograma, dispersão, mapa de calor, barras, pizza, densidade e regressão, cada um com a leitura de negócio que sustenta.
+Gráficos com `matplotlib` e `seaborn` sobre uma base de e-commerce — histograma, dispersão, mapa de calor, barras, pizza, densidade e regressão, cada um com a leitura de negócio que sustenta — e um dashboard interativo da mesma base em Dash e Plotly.
 
 | Notebook | Conteúdo |
 |---|---|
 | [`01-visualizacao-ecommerce.ipynb`](02-visualizacao-dados/notebooks/01-visualizacao-ecommerce.ipynb) | 7 tipos de gráfico sobre preço, nota, desconto, marca e público; conclusões voltadas a decisão de estoque e campanha |
+| [`dashboard/`](02-visualizacao-dados/dashboard/) | Dashboard interativo (Dash + Plotly) da mesma base, com filtros e versão em HTML único |
 
 🚧 Próximos módulos serão adicionados conforme o curso avança.
 

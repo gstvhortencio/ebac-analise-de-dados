@@ -1,6 +1,6 @@
 # Módulo 02 — Visualização de Dados
 
-Segundo módulo do curso. Aplica `matplotlib` e `seaborn` sobre uma base de e-commerce para praticar a escolha do gráfico certo para cada pergunta.
+Segundo módulo do curso. Aplica `matplotlib` e `seaborn` sobre uma base de e-commerce para praticar a escolha do gráfico certo para cada pergunta, e depois leva a mesma análise para um dashboard interativo em Dash e Plotly.
 
 ## Notebook
 
@@ -27,7 +27,13 @@ Exploração de um catálogo de produtos de moda, com uma leitura escrita para c
 
 **Dados:** `ecommerce_estatistica.csv`, base já usada em exercícios anteriores do curso — as colunas com sufixo `_Cod`, `_Freq` e `_MinMax` vêm dessas etapas prévias de codificação e normalização, mantidas aqui como entraram no módulo.
 
-## Como abrir
+## Dashboard
+
+### [`dashboard/`](dashboard/)
+
+A mesma base em versão interativa: cinco indicadores, oito gráficos em Plotly e uma tabela, com filtros por público, faixa de preço e anúncios repetidos. Roda como app Dash e também exporta um HTML único. Detalhes, como rodar e limites estão no [README do dashboard](dashboard/README.md).
+
+## Como abrir o notebook
 
 O notebook já roda com os gráficos salvos — abrem direto aqui no GitHub, sem precisar executar nada. Para rodar:
 
